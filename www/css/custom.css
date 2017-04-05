@@ -1,0 +1,102 @@
+.text-center {
+	text-align: center;
+}
+
+.bar-header {
+	box-shadow: none;
+	border: 0px !important;
+	border-bottom-color: transparent !important;
+	background-image: none !important;
+	background-color: transparent !important;
+	border-bottom: none !important;
+}
+.bar .title {
+  top: 15px;
+	font-size: 22px !important;
+}
+
+ion-view.pane {
+  background: #425a7c; /* Old browsers */
+  background: -moz-linear-gradient(top,  #425a7c 0%, #263b5f 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #425a7c 0%,#263b5f 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #425a7c 0%,#263b5f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#425a7c', endColorstr='#263b5f',GradientType=0 ); /* IE6-9 */
+}
+
+.tabs-striped .tabs {
+	bottom: 15px;
+	box-shadow: none;
+	border: 0px !important;
+	background-color: transparent;
+}
+
+.tabs-striped .tab-item.tab-item-active,
+.tabs-striped .tab-item.active,
+.tabs-striped .tab-item.activated {
+	border-style: none !important;
+	border-width: 0 0 0 0 !important;
+}
+
+.platform-ios .tabs.tab-nav {
+	bottom: 15px;
+	box-shadow: none;
+	border: 0px !important;
+	background: none;
+}
+
+.progress-wrapper {
+  padding: 25% 8%;
+}
+
+.progress-wrapper.top {
+	padding: 8% 5%;
+}
+
+.progress {
+  top: 50%;
+  left: 50%;
+  bottom: auto;
+  font-size: 35px;
+	color: #45ccce;
+  transform: translateY(-50%) translateX(-50%);
+}
+.progress.semi {
+  top: 75%;
+}
+.progress.small {
+  font-size: 20px;
+}
+.progress span {
+	display: block;
+	font-size: 16px;
+	margin-top: 5px;
+}
+
+.sect {
+	margin-top:20px;
+	padding:0px 5%;
+}
+
+.lisp {
+	background-color:#f8f8f8;
+	border-radius:5px;
+}
+
+.card {
+	border-radius: 5px;
+}
+
+.pakan {
+	top: 60px;
+	bottom: 75px;
+}
+
+.item-pakan {
+	padding: 2em;
+	background-color: rgba(220,220,220,0.4);
+}
+
+.col-ct {
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+}

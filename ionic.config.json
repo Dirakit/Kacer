@@ -1,0 +1,12 @@
+{
+  "name": "Kacer",
+  "app_id": "com.dirakit.kacer",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

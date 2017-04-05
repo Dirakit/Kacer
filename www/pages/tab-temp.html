@@ -1,0 +1,49 @@
+<ion-view view-title="Temperature Control" id="temp">
+    <ion-content class="padding" scroll="false" has-bouncing="false">
+        <section id="tempmon" class="progress-wrapper top">
+          <div class="progress semi text-center ng-cloak" style="color:#FE5222">
+            {{ suhu }} <sup>o</sup>C
+            <span>Normal</span>
+          </div>
+          <round-progress
+            max="32"
+            current="suhu"
+            color="url(#fireColor)"
+            bgcolor="#ddd"
+            radius="100"
+            stroke="12"
+            semi="true"
+            rounded="true"
+            clockwise="true"
+            responsive="true"
+            duration="800"
+            animation="easeInOutQuart"
+            animation-delay="0">
+            <svg>
+              <linearGradient id="fireColor" x1="0" x2="1" y1="0" y2="1">
+              	<stop offset="10%"  stop-color="#00AAF5"/>
+              	<stop offset="45%"  stop-color="#FCA136"/>
+              	<stop offset="80%" stop-color="#FE5222"/>
+              	<stop offset="100%" stop-color="#DF2400"/>
+              </linearGradient>
+            </svg>
+          </round-progress>
+        </section>
+        <section style="padding: 0px 5%;">
+          <div class="button-bar">
+            <div class="button" ng-click="stove.mod('on')" ng-class="stove.on">On</div>
+            <div class="button" ng-click="stove.mod('auto')" ng-class="stove.auto">Auto</div>
+            <div class="button" ng-click="stove.mod('off')" ng-class="stove.off">Off</div>
+          </div>
+        </section>
+        <section class="sect">
+          <div class="list lisp">
+            <a class="item item-icon-left" href="#" ng-repeat="rec in record track by $index">
+              <i class="icon ion-bonfire"></i>
+              <h2>{{rec.time | date:'yyyy-MM-dd HH:mm:ss'}}</h2>
+              <span class="badge badge-assertive">{{rec.val}} C</span>
+            </a>
+          </div>
+        </section>
+    </ion-content>
+</ion-view>

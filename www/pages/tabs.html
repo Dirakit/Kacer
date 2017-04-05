@@ -1,0 +1,28 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-color-light">
+
+  <!-- Power -->
+  <ion-tab title="Power" icon="ion-flash" href="#/tab/power">
+    <ion-nav-view name="tab-power"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Light -->
+  <ion-tab title="Light" icon="ion-lightbulb" href="#/tab/light">
+    <ion-nav-view name="tab-light"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Temperature -->
+  <ion-tab title="Temperature" icon="ion-thermometer" href="#/tab/temp">
+    <ion-nav-view name="tab-temp"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Feeder -->
+  <ion-tab title="Feed" icon="ion-pizza" href="#/tab/feeder">
+    <ion-nav-view name="tab-feeder"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>

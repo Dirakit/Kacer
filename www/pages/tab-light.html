@@ -1,0 +1,48 @@
+<ion-view view-title="Lighting Control">
+  <ion-content class="padding" scroll="false" has-bouncing="false">
+      <section id="lightning" class="progress-wrapper top">
+        <div class="progress semi text-center ng-cloak" style="color:#00AAF5">
+          {{ cahaya }} %
+          <span>{{ (cahaya>50)?'Terang':'Gelap' }}</span>
+        </div>
+        <round-progress
+          max="100"
+          current="cahaya"
+          color="url(#powerColor)"
+          bgcolor="#ddd"
+          radius="100"
+          stroke="12"
+          semi="true"
+          rounded="true"
+          clockwise="true"
+          responsive="true"
+          duration="800"
+          animation="easeInOutQuart"
+          animation-delay="0">
+          <svg>
+              <linearGradient id="powerColor" x1="0" x2="1" y1="0" y2="0">
+                  <stop offset="0%"  stop-color="#00E0FE"/>
+                  <stop offset="50%" stop-color="#00AAF5"/>
+                  <stop offset="100%" stop-color="#008CEF"/>
+              </linearGradient>
+          </svg>
+        </round-progress>
+      </section>
+      <section style="padding: 0px 5%;">
+        <div class="button-bar">
+          <div class="button" ng-click="lamp.mod('on')" ng-class="lamp.on">On</div>
+          <div class="button" ng-click="lamp.mod('auto')" ng-class="lamp.auto">Auto</div>
+          <div class="button" ng-click="lamp.mod('off')" ng-class="lamp.off">Off</div>
+        </div>
+      </section>
+      <section class="sect">
+        <div class="list lisp">
+          <a class="item item-icon-left" href="#" ng-repeat="rec in record track by $index">
+            <i class="icon ion-lightbulb"></i>
+            <h2>{{rec.time | date:'yyyy-MM-dd HH:mm:ss'}}</h2>
+            <span class="badge badge-positive">{{rec.val}} %</span>
+          </a>
+        </div>
+      </section>
+  </ion-content>
+</ion-view>

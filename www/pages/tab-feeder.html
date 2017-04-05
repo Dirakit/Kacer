@@ -1,0 +1,102 @@
+<ion-view view-title="Feed Monitoring">
+    <ion-content class="padding pakan" has-bouncing="false">
+      <div class="list card">
+        <div class="progress text-center ng-cloak" style="color:#7F0062">
+          {{ realpk | number:0 }}%
+          <span>
+            Pakan 1
+          </span>
+        </div>
+        <div class="item item-image item-pakan">
+          <round-progress
+            max="100"
+            current="realpk"
+            color="url(#feedColor)"
+            bgcolor="#ddd"
+            radius="100"
+            stroke="12"
+            semi="true"
+            rounded="true"
+            clockwise="true"
+            responsive="true"
+            duration="800"
+            animation="easeInOutQuart"
+            animation-delay="0">
+            <svg>
+                <linearGradient id="feedColor" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0%"  stop-color="#BF0093"/>
+                    <stop offset="50%" stop-color="#7F0062"/>
+                    <stop offset="100%" stop-color="#400031"/>
+                </linearGradient>
+            </svg>
+          </round-progress>
+        </div>
+
+        <a class="item royal" href="#">
+          <span class="row text-center">
+            <span class="col col-33">
+              <b>{{ ((realpk/100)*5) | number:1 }} Kg</b><br>
+              TERSISA
+            </span>
+            <span class="col col-33 col-ct">
+              <b>{{ 5 - ((realpk/100)*5) | number:1 }} Kg</b><br>
+              DIMAKAN
+            </span>
+            <span class="col col-33">
+              <b>{{ ((realpk/100)*12) | number:0 }} Jam</b><br>
+              HABIS
+            </span>
+          </span>
+        </a>
+      </div>
+      <div class="list card" ng-repeat="pk in pakan">
+        <div class="progress text-center ng-cloak" style="color:#7F0062">
+          {{ pk | number:0 }}%
+          <span>
+            Pakan {{$index+2}}
+          </span>
+        </div>
+        <div class="item item-image item-pakan">
+          <round-progress
+            max="100"
+            current="pk"
+            color="url(#feedColor)"
+            bgcolor="#ddd"
+            radius="100"
+            stroke="12"
+            semi="true"
+            rounded="true"
+            clockwise="true"
+            responsive="true"
+            duration="800"
+            animation="easeInOutQuart"
+            animation-delay="0">
+            <svg>
+                <linearGradient id="feedColor" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0%"  stop-color="#BF0093"/>
+                    <stop offset="50%" stop-color="#7F0062"/>
+                    <stop offset="100%" stop-color="#400031"/>
+                </linearGradient>
+            </svg>
+          </round-progress>
+        </div>
+
+        <a class="item royal" href="#">
+          <span class="row text-center">
+            <span class="col col-33">
+              <b>{{ ((pk/100)*5) | number:1 }} Kg</b><br>
+              TERSISA
+            </span>
+            <span class="col col-33 col-ct">
+              <b>{{ 5 - ((pk/100)*5) | number:1 }} Kg</b><br>
+              DIMAKAN
+            </span>
+            <span class="col col-33">
+              <b>{{ ((pk/100)*12) | number:0 }} Jam</b><br>
+              HABIS
+            </span>
+          </span>
+        </a>
+      </div>
+    </ion-content>
+</ion-view>

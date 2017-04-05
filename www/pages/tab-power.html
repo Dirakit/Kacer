@@ -1,0 +1,32 @@
+<ion-view view-title="Power Consumption">
+  <ion-content class="padding" scroll="false" has-bouncing="false">
+      <section id="powermon" class="progress-wrapper">
+        <div class="progress text-center ng-cloak" style="color:#FE5222">
+          {{ watt | number:0 }} Watt
+          <span>{{arus | number:2}} A - {{volt | number:0}} V</span>
+        </div>
+        <round-progress
+          max="900"
+          current="watt"
+          color="url(#powerColor)"
+          bgcolor="#ddd"
+          radius="100"
+          stroke="12"
+          semi="false"
+          rounded="true"
+          clockwise="true"
+          responsive="true"
+          duration="800"
+          animation="easeInOutQuart"
+          animation-delay="0">
+          <svg>
+              <linearGradient id="powerColor" x1="1" x2="0" y1="0" y2="1">
+                <stop offset="0%"  stop-color="#FCA136"/>
+                <stop offset="50%" stop-color="#FE5222"/>
+                <stop offset="100%" stop-color="#DF2400"/>
+              </linearGradient>
+          </svg>
+        </round-progress>
+      </section>
+  </ion-content>
+</ion-view>
